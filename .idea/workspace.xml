@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c101c9dc-fd33-43b6-a7cc-c0ac5e417131" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chonkiestCat.py" beforeDir="false" afterPath="$PROJECT_DIR$/chonkiestCat.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chonkiestCat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="66" column="47" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="47" />
+            <state relative-caret-position="379">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#24#34#0" expanded="true" />
               </folding>
@@ -99,12 +98,12 @@
       <updated>1591732456852</updated>
       <workItem from="1591732460935" duration="309000" />
       <workItem from="1591732803643" duration="421000" />
-      <workItem from="1591734840081" duration="8347000" />
+      <workItem from="1591734840081" duration="8903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9077000" />
+    <option name="totallyTimeSpent" value="9633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -170,8 +169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chonkiestCat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="66" column="47" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="47" />
+        <state relative-caret-position="379">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#24#34#0" expanded="true" />
           </folding>

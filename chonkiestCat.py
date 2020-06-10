@@ -7,11 +7,11 @@ from contextlib import closing
 from bs4 import BeautifulSoup
 import re
 
-if __name__ == "__main__":
-    print(f"Arguments Count: {len(sys.argv)}")
-    for i, arg in enumerate(sys.argv):
-        print(f"Argument {i:>6}: {arg}")
-
+# if __name__ == "__main__":
+#     print(f"Arguments Count: {len(sys.argv)}")
+#     for i, arg in enumerate(sys.argv):
+#         print(f"Argument {i:>6}: {arg}")
+#
 
 cat_url = "http://humanesocietysoco.org/adopt/cats/"
 cat_url1 = "https://www.sfspca.org/wp-json/sfspca/v1/filtered-posts/get-adoptions?per_page=100"
@@ -19,8 +19,8 @@ cat_url1 = "https://www.sfspca.org/wp-json/sfspca/v1/filtered-posts/get-adoption
 
 def is_good_response(resp):
     content_type = resp.headers['Content-Type'].lower()
-    print(f"content type: {content_type}")
-    print(f"status code: {resp.status_code}")
+    # print(f"content type: {content_type}")
+    # print(f"status code: {resp.status_code}")
     return (resp.status_code == 200
             and content_type is not None
             and content_type.find('html') > -1)
@@ -42,16 +42,10 @@ def get_cats(url):
 
 
 cats_html_raw = get_cats(cat_url)
-print(len(cats_html_raw))
-# print(cats_html_raw)
+
 
 soup = BeautifulSoup(cats_html_raw, "html.parser")
 divs = soup.find_all('div', {"class": ["dog", "Cat"]})
-# print(divs)
-# print(type(divs[0]))
-# print(len(divs))
-# print(divs[0].attrs)
-# print(divs[44])
 
 
 nameTags = []
@@ -70,21 +64,25 @@ for i in range(len(divs)):
     else:
         catInfo[nameTags[i].text] = 0.0
 
-# for catDiv in catDivs:
-#
-#     if 'class' in div.attrs and 'name' in div['class']:
-#         names.append(div.a.text)
-#     if 'class' in div.attrs and 'description' in div['class']:
-#         weight = re.search(r'"Weight: "[0-9]+.*(lbs)', div.text)
-#         if weight:
-#             weights.append(weight.group(1))
+# print(catInfo)
 
+print('--------------------------------------------------')
+maxWeight = 0
+maxCat = ''
 
-# print(names)
-# print(weights)
-print(catInfo)
+print("Searching for fat cats ...")
 
+for cat, weight in catInfo.items():
+    print(f"Weighing {cat}")
+    # print(f"{cat} is {weight} lbs")
+    if weight > maxWeight:
+        maxWeight = weight
+        maxCat = cat
 
+print("Weighing complete")
+print(f"Chonkiest cat is: {maxCat} at {maxWeight} lbs")
+
+print('--------------------------------------------------')
 
 
 
