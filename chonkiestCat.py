@@ -1,10 +1,10 @@
+#! /usr/bin/env python
+
 import sys
-import urllib.request
-from bs4 import BeautifulSoup
 from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
-
+from bs4 import BeautifulSoup
 
 if __name__ == "__main__":
     print(f"Arguments Count: {len(sys.argv)}")
@@ -13,9 +13,13 @@ if __name__ == "__main__":
 
 
 cat_url = "http://humanesocietysoco.org/adopt/cats/"
+cat_url1 = "https://www.sfspca.org/wp-json/sfspca/v1/filtered-posts/get-adoptions?per_page=100"
+
 
 def is_good_response(resp):
     content_type = resp.headers['Content-Type'].lower()
+    print(f"content type: {content_type}")
+    print(f"status code: {resp.status_code}")
     return (resp.status_code == 200
             and content_type is not None
             and content_type.find('html') > -1)
@@ -23,17 +27,28 @@ def is_good_response(resp):
 
 def get_cats(url):
     try:
-        with closing(get(url, stream=True)) as resp:
-            if is_good_response(resp):
-                return resp.content
-            else:
-                print("No cats right now :(")
-                return None
+        response = get(url)
+        print(response)
+        return response.content
+        # with closing(get(url, stream=True)) as resp:
+        #     if is_good_response(resp):
+        #         return resp.content
+        #     else:
+        #         print("No cats right now :(")
+        #         return None
     except RequestException as e:
-        print("Error getting cats")
+        print(f"Error getting cats: {e}")
+
+
+cats_html_raw = get_cats(cat_url1)
+# len(cats_html_raw)
+# print(cats_html_raw)
+#
+# html = BeautifulSoup(cats_html_raw, 'html.parser')
+# for i, div in enumerate(html.select('div')):
+#     if div['class'] == 'description':
+#         print(div.text)
+        
 
 
 
-cats_html = get_cats(cat_url)
-len(cats_html)
-print(raw_html)
