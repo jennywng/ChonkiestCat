@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c101c9dc-fd33-43b6-a7cc-c0ac5e417131" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/chonkiestCat.py" beforeDir="false" afterPath="$PROJECT_DIR$/chonkiestCat.py" afterDir="false" />
-    </list>
+    <list default="true" id="c101c9dc-fd33-43b6-a7cc-c0ac5e417131" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="3026" />
@@ -98,16 +96,15 @@
       <updated>1591732456852</updated>
       <workItem from="1591732460935" duration="309000" />
       <workItem from="1591732803643" duration="421000" />
-      <workItem from="1591734840081" duration="8903000" />
+      <workItem from="1591734840081" duration="8969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9633000" />
+    <option name="totallyTimeSpent" value="9699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09896907" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
